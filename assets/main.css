@@ -1,0 +1,73 @@
+body {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: black;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jeu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 700px;
+    min-height: 650px;
+    width: 800px;
+    border: 5px lightgreen solid;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #5b7383;
+}
+
+.titre{
+    color: white;
+}
+
+.carte{
+    width: 100px;
+    height: 100px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px lightgreen solid;
+    border-radius: 5px;
+    transition: all 0.5s ease-out;
+}
+
+.flip{
+    transform: rotateY(720deg);
+}
+
+.choix{
+    border: 3px solid lightgreen;
+    box-shadow: 0 0 20px 5px lightgreen;
+}
+
+
+h2{
+    color:white;
+}
+
+#message{
+    color: white;
+    height: 50px;
+    width: 70%;
+    text-align: center;
+    font-size: 3em;
+}
+
