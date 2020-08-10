@@ -3,26 +3,71 @@ body {
     height: auto;
     margin: 0 auto;
     margin-bottom: 50px;
-    background-color: black;
+    background-image: url('images/forest.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 36%;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 }
 
 .info{
     width: 70%;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.7);
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     justify-content: space-around;
     align-items: center;
 }
 
+#logo{
+    margin-top: 20px;
+    background-image: url('images/pokematch.png');
+    border-radius: 5px;
+    width: 400px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.container_boutons{
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    background-color: rgb(138, 150, 46);
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+#mode{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.music_label{
+    color:white;
+}
+
 .jeu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
     height: 700px;
@@ -31,33 +76,86 @@ body {
     border: 5px lightgreen solid;
     border-radius: 15px;
     padding: 20px;
-    background-color: #5b7383;
+    background-color:rgba(138, 150, 46, 0.5);
+}
+
+.victoire1{
+    background-image: url('images/victory1.png');
+    background-size:contain ;
+    animation: victoire 1.5s;
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+}
+
+.victoire2{
+    background-image: url('images/victory2.png');
+    background-size:cover ;
+    animation: victoire 1.5s;
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+    
+}
+
+.fail{
+    background-image: url('images/fail.png');
+    background-size: cover ;
+    animation: victoire 1.5s;
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+}
+
+@keyframes victoire {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
 }
 
 .titre{
     color: white;
 }
 
+#temps, 
+#temps_affichage{
+    color: white;
+}
+
+#temps{
+    background-color: rgba(138, 150, 46, 1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
 .carte{
     width: 100px;
     height: 100px;
+    
     
     background-position: center;
     background-repeat: no-repeat;
     border: 3px lightgreen solid;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px 1px black;
     transition: all 0.5s ease-out;
 }
 
+.carte:active{
+    box-shadow: none;
+}
+
 .flip{
-    transform: rotateY(720deg);
+    transform: rotateY(360deg);
+}
+
+.blank{
+    background-color: rgba(138, 150, 46, 0);
 }
 
 .choix{
     border: 3px solid lightgreen;
     box-shadow: 0 0 20px 5px lightgreen;
+   
 }
-
 
 h2{
     color:white;
@@ -65,9 +163,15 @@ h2{
 
 #message{
     color: white;
-    height: 50px;
-    width: 70%;
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: 5px 5px 10px 1px black;
+    border-radius: 5px;
+    
 }
 
